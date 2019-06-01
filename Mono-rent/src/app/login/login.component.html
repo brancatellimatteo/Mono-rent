@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Monopattini</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container" *ngIf="showLogin">
+  <h2>Accedi</h2>
+    <div class="form-group">
+      <label for="uname">Username:</label>
+      <input type="text" #uname class="form-control" id="uname" required>
+    </div>
+    <div class="form-group">
+      <label for="psw">Password:</label>
+      <input type="password" #psw class="form-control" id="psw" required>
+    </div>
+    <button class="btn btn-success" (click)="accedi(uname, psw)">Accedi</button>
+    <br><br>
+    <p>{{mex}}</p>
+  </div>
+</body>
