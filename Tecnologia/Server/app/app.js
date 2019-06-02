@@ -32,8 +32,6 @@ app.post('/login', function(req, res) {
     var username = req.query.username;
     var pass = req.query.password;
 
-    conn.connect(function(err) {
-        if (err) throw err;
         conn.query('SELECT * FROM utente WHERE username = "' + username + '" AND password = "' + pass + '"', function(err, result, fields) {
             if (err) throw err;
             if(result.length > 0){
@@ -43,7 +41,6 @@ app.post('/login', function(req, res) {
                 res.send(false);
             }
         });
-    });
 })
 
 
