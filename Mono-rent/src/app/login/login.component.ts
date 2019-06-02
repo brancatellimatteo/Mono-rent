@@ -14,7 +14,6 @@ export class LoginComponent implements OnInit {
   public showLogin: boolean;
   public mappaVisible: boolean;
   data:Object;
-  msg:string;
 
   constructor(public http: HttpClient) {
     this.showLogin = true;
@@ -36,11 +35,11 @@ export class LoginComponent implements OnInit {
    this.http.post('https://3000-f6bf1bbb-b688-40da-a629-ebd564aee32d.ws-eu0.gitpod.io/login',null, options  ).subscribe(data => {
     this.data = data;
     if(data == true){
-      this.msg = "Hai eseguito l'accesso";
+      alert('Login effettuato correttamente');
       this.showLogin = false;
       this.mappaVisible = true;
     }else{
-      this.msg = "Qualcosa è andato storto, riprova.";
+      alert('Qualcosa è andato storto. Riprova.');
     }
    });
   }
