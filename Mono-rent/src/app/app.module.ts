@@ -5,12 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
+import { MappaComponent } from './mappa/mappa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistrazioneComponent
+    RegistrazioneComponent,
+    MappaComponent
   ],
   imports: [
     BrowserModule,

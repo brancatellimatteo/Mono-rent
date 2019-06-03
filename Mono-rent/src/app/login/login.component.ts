@@ -12,12 +12,14 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
   public showLogin: boolean;
-  public mappaVisible: boolean;
+  public showMappa: boolean;
+  public showLogout: boolean;
   data:Object;
 
   constructor(public http: HttpClient) {
     this.showLogin = true;
-    this.mappaVisible = false;
+    this.showMappa = false;
+    this.showLogout = false;
   }
 
    accedi(uname: HTMLInputElement, psw:HTMLInputElement):boolean{
@@ -37,7 +39,8 @@ export class LoginComponent implements OnInit {
     if(data == true){
       alert('Login effettuato correttamente');
       this.showLogin = false;
-      this.mappaVisible = true;
+      this.showMappa = true;
+      this.showLogout = true;
     }else{
       alert('Qualcosa è andato storto. Riprova.');
     }
