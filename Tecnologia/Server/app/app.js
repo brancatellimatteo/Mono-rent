@@ -32,7 +32,7 @@ app.post('/login', function(req, res) {
     var username = req.query.username;
     var pass = req.query.password;
 
-        conn.query('SELECT * FROM utente WHERE username = "' + username + '" AND password = "' + pass + '"', function(err, result, fields) {
+        conn.query('SELECT * FROM Utente_PF WHERE username = "' + username + '" AND password = "' + pass + '"', function(err, result, fields) {
             if (err) throw err;
             if(result.length > 0){
                 res.send(true);
@@ -43,6 +43,20 @@ app.post('/login', function(req, res) {
         });
 })
 
+app.post('/registrazione', function(req, res) {
+
+    var name = req.query.name;
+    var surname = req.query.surname;
+    var dataN = req.query.dataN;
+    var email = req.query.email;
+    var uname = req.query.username;
+    var psw = req.query.password;
+
+        conn.query('INSERT INTO Utente_PF(nome,cognome,dataN,email,username,password) VALUES("' + name + '","' + surname + '","' + dataN + '","' + email + '","' + uname + '","' + psw + '")', function(err, result, fields) {
+            if (err) throw err;
+            res.send(result);
+        });
+})
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
