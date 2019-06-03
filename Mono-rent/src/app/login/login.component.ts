@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
    const params = new HttpParams().set('username', uname).set('password', psw);
    const options = {headers,params,withCredentials: false};
 
-   this.http.post('https://3000-f6bf1bbb-b688-40da-a629-ebd564aee32d.ws-eu0.gitpod.io/login',null, options  ).subscribe(data => {
+   this.http.post('https://3000-d2ddafa6-6f8b-4573-9918-e2729675ef9a.ws-eu0.gitpod.io/login',null, options  ).subscribe(data => {
     this.data = data;
     if(data == true){
       alert('Login effettuato correttamente');

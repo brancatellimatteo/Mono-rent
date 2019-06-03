@@ -1,3 +1,43 @@
-<p>
-  registrazione works!
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Monopattini</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container" *ngIf="showRegistrazione">
+  <h2>Crea il tuo account</h2>
+    <div class="form-group">
+      <label for="name">Nome:</label>
+      <input type="text" onfocus="this.value=''" #name class="form-control" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="surname">Cognome:</label>
+      <input type="text" onfocus="this.value=''" #surname class="form-control" id="surname" required>
+    </div>
+    <div class="form-group">
+      <label for="dataN">Data di Nascita:</label>
+      <input type="date" onfocus="this.value=''" #dataN class="form-control" id="dataN" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" onfocus="this.value=''" #email class="form-control" id="email" required>
+    </div>
+    <div class="form-group">
+      <label for="uname">Username:</label>
+      <input type="text" onfocus="this.value=''" #uname class="form-control" id="uname" required>
+    </div>
+    <div class="form-group">
+      <label for="psw">Password:</label>
+      <input type="password" onfocus="this.value=''" #psw class="form-control" id="psw" required>
+    </div>
+    <button id="invia" class="btn btn-success" (click)="registrati(name,surname,dataN,email,uname,psw)">Registrati</button>
+    <br><br>
+  </div>
+  <div class="container" *ngIf="showLogin">
+    <app-login></app-login>
+  </div>
+</body>
+
