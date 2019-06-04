@@ -1,4 +1,4 @@
-export class Monop{
+export class Monopattino{
   QRcode: string;
   dataOraPrelievo: Date;
   dataOraRilascio: Date;

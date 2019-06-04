@@ -35,7 +35,7 @@ export class RegistrazioneComponent implements OnInit {
                   .set('password',psw);
    const options = {headers,params,withCredentials: false};
 
-   this.http.post('https://3000-d2ddafa6-6f8b-4573-9918-e2729675ef9a.ws-eu0.gitpod.io/registrazione',null, options  ).subscribe(data => {
+   this.http.post('https://3000-c828032b-866f-4fc3-acf7-95f97f5abe5c.ws-eu0.gitpod.io/registrazione',null, options  ).subscribe(data => {
     this.data = data;
     if(data != undefined){
       alert('Registrazione avvenuta correttamente. Puoi effettuare il login.');

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
 import { MappaComponent } from './mappa/mappa.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,10 @@ import { MappaComponent } from './mappa/mappa.component';
   imports: [
     BrowserModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCzUI8LYmnHPyFrtRT8Q8IEREZfOygUl-U'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
