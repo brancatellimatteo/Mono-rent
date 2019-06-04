@@ -58,6 +58,16 @@ app.post('/registrazione', function(req, res) {
         });
 })
 
+app.get('/visualizzaMonopattini', function (req, res) {
+    console.log('prova')
+    var args = {};
+    //chiamata al web service
+    client.get("https://9000-c828032b-866f-4fc3-acf7-95f97f5abe5c.ws-eu0.gitpod.io/visualizzaMonopattini", args, function (data, response) {
+        console.log(data);
+        res.send({result: data});
+    });
+});
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
