@@ -20,3 +20,21 @@
       <div class="col-sm-1">
       </div>
     </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="form-group">
+        <input #QRCode name="QRcode" type="text" placeholder="Inserisci il QRCode" required><br>
+        <button (click)="AvviaCorsa(QRCode)" class="btn btn-success">Avvia Corsa</button>
+        <p>{{mex}}</p>
+        </div>
+        <br><br>
+      </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-5">
+        <button (click)="ChiudiCorsa()" class="btn btn-danger">Chiudi Corsa</button>
+        <p>{{mex2}}</p>
+      </div>
+    </div>
+  </div>

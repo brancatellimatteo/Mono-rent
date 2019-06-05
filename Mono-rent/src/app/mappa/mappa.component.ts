@@ -21,7 +21,7 @@ export class MappaComponent implements OnInit {
     this.visualizzaMonopattini();
    }
   visualizzaMonopattini(): void {
-     this.o = this.http.get<Monopattino[]>('https://3000-c828032b-866f-4fc3-acf7-95f97f5abe5c.ws-eu0.gitpod.io/visualizzaMonopattini');
+     this.o = this.http.get<Monopattino[]>('https://3000-c2392745-a72f-40df-81f3-3d469f751159.ws-eu0.gitpod.io/visualizzaMonopattini');
      this.o.subscribe(this.getData);
   }
   getData = (monopattino : Monopattino[]) =>
@@ -29,6 +29,8 @@ export class MappaComponent implements OnInit {
      this.monopattini = monopattino;
      console.log(this.monopattini);
    }
+
+   
   ngOnInit() {
   }
 
